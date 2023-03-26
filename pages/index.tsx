@@ -1,4 +1,6 @@
+import Mint from "#/components/Mint";
 import Voting from "#/components/Voting";
+import { Flex, Heading } from "@chakra-ui/react";
 import Head from "next/head";
 
 export default function Home() {
@@ -13,10 +15,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>Blockchain Voting App</h1>
+      <Flex flexDir="column" align="center">
+        <Heading my={5}>Blockchain Voting App</Heading>
         <Voting />
-      </main>
+        <Mint />
+      </Flex>
     </div>
   );
 }
