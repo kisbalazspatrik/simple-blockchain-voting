@@ -127,6 +127,11 @@ export default function Voting() {
           status: "error",
           message: "You have already voted on this issue",
         });
+      } else if (error.toString().includes("must own an NFT")) {
+        setResponse({
+          status: "error",
+          message: "You must own an NFT to vote",
+        });
       } else {
         setResponse({
           status: "error",
