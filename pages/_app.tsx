@@ -1,5 +1,5 @@
 import "#/styles/globals.css";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import {
   EthereumClient,
@@ -33,11 +33,18 @@ export default function App({ Component, pageProps }: AppProps) {
     setMounted(true);
   }, []);
 
+  const config = {
+    initialColorMode: "dark",
+    useSystemColorMode: false,
+  };
+
+  const theme = extendTheme({ config });
+
   return (
     <>
       {mounted && (
         <WagmiConfig client={wagmiClient}>
-          <ChakraProvider>
+          <ChakraProvider theme={theme}>
             <Component {...pageProps} />
           </ChakraProvider>
         </WagmiConfig>
