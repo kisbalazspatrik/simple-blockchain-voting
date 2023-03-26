@@ -2,7 +2,7 @@
 
 Simple Blockchain Voting is a basic voting application that utilizes blockchain technology and Decentralized Autonomous Organization (DAO) principles for community-based decision making. The application frontend is built with Next.js and TypeScript, while the backend leverages the Ethereum blockchain with a Solidity smart contract.
 
-##[Demo site here](https://demo2.nfteam.eu/ "##Demo site here")
+[Demo site here](https://demo2.nfteam.eu/ "##Demo site here")
 
 ## Features
 
